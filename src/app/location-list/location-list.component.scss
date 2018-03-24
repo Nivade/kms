@@ -1,0 +1,32 @@
+.location-container {
+  flex-direction: row;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.list-item-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 100%;
+}
+
+.list-item-toggle .btn:hover {
+  color: #2ecc71;
+}
+
+.list-item-toggle .btn:focus {
+  box-shadow: none;
+}
+.list-item-toggle-btn {
+  background: rgba(0,0,0,0);
+}
+.list-item-toggle-btn,
+.list-item-name {
+  margin-bottom: 0;
+  line-height: 1;
+  align-self: center;
+}
+
+.list-item-name {
+  padding-left: 20px;
+}

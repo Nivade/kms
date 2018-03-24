@@ -1,0 +1,76 @@
+
+<div class="kms-panel-container">
+  <ul class="nav nav-tab-bar">
+    <li class="nav-item">
+      <a class="nav-link" id="kilometers-tab" data-toggle="tab" href="#kilometers" role="tab" aria-controls="kilometers" aria-selected="true">
+        <i class="material-icons">directions_car</i>
+        Kilometers
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">
+        <i class="material-icons">tag_faces</i>
+        Profiel
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="clients-tab" data-toggle="tab" href="#clients" role="tab" aria-controls="clients" aria-selected="true">
+        <i class="material-icons">supervisor_account</i>
+        Clienten
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" id="locations-tab" data-toggle="tab" href="#locations" role="tab" aria-controls="locations" aria-selected="true">
+        <i class="material-icons">map</i>
+        Locaties
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane fade show" id="kilometers" role="tabpanel" aria-labelledby="kilometers-tab">
+      <p>
+        Bereken je kilometers.
+      </p>
+    </div>
+    <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+    <div class="tab-pane fade show" id="clients" role="tabpanel" aria-labelledby="clients-tab"></div>
+    <div class="tab-pane fade show active" id="locations" role="tabpanel" aria-labelledby="locations-tab">
+      <app-location-tab-content></app-location-tab-content>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="container-fluid">
+  <div class="home-panel color-dark">
+    <div class="col">
+      <p>
+        Bereken je kilometers
+      </p>
+    </div>
+  </div>
+
+  <div class="home-panel color-light">
+    <div class="col">
+      <p class="sm">Gebruik het volgende formulier om </p>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button type="button" class="btn btn-outline-secondary">Action</button>
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <a *ngFor="let location of locations" class="dropdown-item" href="#"> {{location.name}} </a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+      </div>
+    </div>
+  </div>
+</div>
+-->

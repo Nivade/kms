@@ -1,0 +1,9 @@
+{
+  "/kms": {
+    "secure": false,
+    "pathRewrite": {
+    "^/kms": ""
+  },
+    "changeOrigin": true
+  }
+}

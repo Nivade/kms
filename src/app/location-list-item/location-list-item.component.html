@@ -1,0 +1,48 @@
+<div id="{{ 'list-item-' + location.id }}" class="collapse item-container" data-parent="#locationList">
+
+  <div *ngIf="!name; else forminfo">
+    <form [formGroup]="rForm" (ngSubmit)="submit(rForm.value)">
+      <div class="form-container">
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="label-addon-name">Naam</span>
+          </div>
+          <input type="text" [(ngModel)]="location.name" class="form-control" id="basic-url" placeholder="" formControlName="name" aria-describedby="label-addon-name" aria-label="Bijnaam">
+        </div>
+        <div class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">This is required</div>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="label-addon-zip">Postcode</span>
+          </div>
+          <input type="text" [(ngModel)]="location.zip" class="form-control" id="basic-url" placeholder="" formControlName="zip" aria-describedby="label-addon-zip" aria-label="Postcode">
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="label-addon-address">Adresregel</span>
+          </div>
+          <input type="text" [(ngModel)]="location.street_address" class="form-control" id="basic-url" placeholder="" formControlName="street_address" aria-describedby="label-addon-address" aria-label="Adres">
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="label-addon-city">Plaats</span>
+          </div>
+          <input type="text" [(ngModel)]="location.city" class="form-control" id="basic-url" placeholder="" formControlName="city" aria-describedby="label-addon-city" aria-label="Plaatsnaam">
+        </div>
+
+        <input type="submit" class="button expanded" value="submit" [disabled]="!rForm.valid">
+      </div>
+    </form>
+  </div>
+  <ng-template #forminfo>
+    <div class="form-container">
+      <div class="row">
+        <h1>{{ name }}</h1>
+      </div>
+      <div class="row">
+        <p>{{ zip }}, {{ city }}</p>
+      </div>
+    </div>
+  </ng-template>
+</div>
