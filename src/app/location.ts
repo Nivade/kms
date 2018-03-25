@@ -9,10 +9,4 @@ export class Location {
   country: string;
   full_address: string;
   state: string;
-
-  constructor(public state = 'inactive')
-
-  public toggleState() {
-    this.state = this.state === 'active' ? 'inactive' : 'active';
-  }
 }

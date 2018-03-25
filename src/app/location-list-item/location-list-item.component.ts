@@ -8,17 +8,10 @@ import { Location } from '../location';
   styleUrls: ['./location-list-item.component.scss']
 })
 export class LocationListItemComponent implements OnInit {
-  @Input() location: Location,
-  @Input('name') location.name: string,
-  @Input('zip')  location.zip: string,
-  @Input('street_address')  location.street_address: string,
-  @Input('city')  location.city: string;
+  @Input() location: Location;
+  @Input('name') name:string;
 
   rForm: FormGroup;
-  zip:string = location.zip;
-  city:string = location.city;
-  street_address: string;
-  full_address: string;
   address_regex: RegExp = /^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i;
   zip_regex: RegExp = /^[1-9][0-9]{3}[\s]?[A-Za-z]{2}$/i;
 

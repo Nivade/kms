@@ -1,11 +1,10 @@
 <div id="locationList">
   <div class="location-container" *ngFor="let location of locations" >
-    <div appListItemHighlight class="list-item-toggle"
+    <div #appListItemHighlight class="list-item-toggle"
         data-toggle="collapse"
         aria-expanded="false"
         [attr.data-target]="'#list-item-' + location.id"
         [attr.aria-controls]="'list-item-' + location.id"
-        [@hover]="location.state"
         (click)="location.toggleState()"
         >
       <h6 class="list-item-name">{{ location.name }}</h6>

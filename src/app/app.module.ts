@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,8 +34,7 @@ import { LocationListItemEffectDirective } from './location-list-item-effect.dir
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB0JMGdUBkPWSwwehHRfI4eFICrKZ8Pzc8'
     })
