@@ -1,7 +1,6 @@
 export class Address {
-  zip: string;
+  zipcode: string;
   city: string;
   country: string;
-  street_address: string;
-  full_address: string;
+  address: string;
 }
